@@ -1,0 +1,40 @@
+<html>
+<head >
+   <title>Transparent Login Form Design</title>
+   <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+   <body>
+   <style>
+      #home-form {
+         width : fit-content;
+   height : fit-content;
+   color : #fff;
+   background : rgba(0,1.0,0.5,0.5);
+   top : 50%;
+   left: 50%;
+   position : absolute;
+   transform : translate(-50%,-50%);
+   box-sizing : border-box;
+   padding : 70px;
+   padding-bottom: 10px;
+      }
+
+      input{
+         margin: 24px;
+      }
+
+      input[type="submit"] {
+         border-radius: 10px;
+         margin-left: 10px;
+      }
+   </style>
+   <br> </br>
+   <div id = 'home-form'>
+   <form action = "{{ url_for('start') }}" method = "POST" >
+            <h3>Student Information</h3>
+         type 1 to see info / type 2 to enter or exit<br>
+         <input type = "text" name = "task" /><br>
+         <input type = "submit" value = "submit" /><br>
+   </div>
+   </body>
+</html>
